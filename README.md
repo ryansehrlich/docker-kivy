@@ -20,14 +20,14 @@ get our docker trusted build like this:
 
 
 ```
-docker pull kartoza/kivy
+docker pull timlinux/kivy
 ```
 
 To build the image yourself without apt-cacher (also consumes more bandwidth
 since deb packages need to be refetched each time you build) do:
 
 ```
-docker build -t kartoza/kivy git://github.com/kartoza/docker-kivy
+docker build -t kartoza/kivy git://github.com/timlinux/docker-kivy
 ```
 
 To build with apt-cache (and minimised download requirements) do you need to
@@ -36,13 +36,13 @@ match your cacher host. Then build using a local url instead of directly from
 github.
 
 ```
-git clone git://github.com/kartoza/docker-kivy
+git clone git://github.com/timlinux/docker-kivy
 ```
 
 Now edit ``71-apt-cacher-ng`` then do:
 
 ```
-docker build -t kartoza/kivy .
+docker build -t timlinux/kivy .
 ```
 
 ## Run
@@ -51,7 +51,7 @@ docker build -t kartoza/kivy .
 To create a running container do:
 
 ```
-sudo docker run --name "kivy" --hostname="kivy" --rm -i -t kartoza/kivy --help
+sudo docker run --name "kivy" --hostname="kivy" --rm -i -t timlinux/kivy --help
 ```
 
 ## Credits
